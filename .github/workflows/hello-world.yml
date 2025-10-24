@@ -1,9 +1,12 @@
 name: Hello World Example
 on:
   push:
-    - main
+    branches:
+      - main
 jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "hola mundo"
+      - run: echo "hola"
+      - run: sleep 10
+      - run: echo "adiós"
